@@ -12,14 +12,11 @@ This repository contains the Kotlin (Native Android) implementation for the Mobi
 
 ## Screenshots
 
-### Home Screen
-![Login Screen](assets/Screenshot_20250926-112711-portrait.png)
+| Login Screen | Dashboard | Transaction History |
+|--------------|-----------|---------------|-------------------|
+|![Login Screen](assets/Screenshot_20250926-112711-portrait.png) | ![Dashboard](assets/Screenshot_20250926-112711-portrait.png) | ![Transaction History](assets/Screenshot_20250926-112725-portrait.png) |
 
-### My Accounts
-![Dashboard](assets/Screenshot_20250926-112711-portrait.png)
 
-### Transaction History
-![Transaction History](assets/Screenshot_20250926-112725-portrait.png)
 
 
 
