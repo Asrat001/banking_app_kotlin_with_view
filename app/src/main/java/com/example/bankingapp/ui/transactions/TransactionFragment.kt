@@ -64,8 +64,7 @@ class TransactionFragment : Fragment() {
             TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
             TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
             TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
-            TransactionItem("4", "2024-10-04", "Restaurant", 60.00, "DEBIT"),
-            TransactionItem("5", "2024-10-05", "Gym Membership", 45.00, "DEBIT")
+
         )
         //yesterday list
 
@@ -73,8 +72,7 @@ class TransactionFragment : Fragment() {
             TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
             TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
             TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
-            TransactionItem("4", "2024-10-04", "Restaurant", 60.00, "DEBIT"),
-            TransactionItem("5", "2024-10-05", "Gym Membership", 45.00, "DEBIT")
+
         )
 
         transactionAdaptor.submitList(transactionItems)
