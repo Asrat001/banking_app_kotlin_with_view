@@ -3,6 +3,10 @@
 ## Overview
 This repository contains the Kotlin (Native Android) implementation for the Mobile Developer Challenge: Banking App User Interface. The app provides an intuitive user interface for core banking operations, interacting with a provided backend API (or mocked where necessary). This version focuses primarily on the UI components and layout, with partial API integration for demonstration purposes. For a fully functional cross-platform version, check out the Flutter counterpart.
 
+
+> **Note:** This kotlin version currently is not full done it mostly UI/UX fidelity to the Figma design. Full API integration (e.g., real-time data fetching and error responses) is not full implemented but the Network  module is done and ready for api integration 
+
+
 The app demonstrates:
 
 - User authentication (login and registration screens)
