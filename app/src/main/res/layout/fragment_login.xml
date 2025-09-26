@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue_gray"
+    >
+
+
+
+    <!-- Dark Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:letterSpacing="0.05"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_here"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Content Area -->
+    <ScrollView
+        android:id="@+id/contente_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp"
+        android:scrollbars="none"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/top_left_raduis_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Back Arrow Icon -->
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/back"
+                android:src="@drawable/transfer" />
+
+            <!-- Username Field -->
+
+                        <com.example.bankingapp.ui.componets.TextInputView
+                            android:id="@+id/usernameField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            app:labelText="Username"
+                            app:drawableEnd="@drawable/person"
+                            app:hintText="Enter User Name"
+                            app:inputTypeAttr="multiline"
+                        />
+
+                        <!-- Password Field -->
+                        <com.example.bankingapp.ui.componets.TextInputView
+                            android:id="@+id/passwordField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            app:labelText="Password"
+                            app:inputTypeAttr="text"
+                            android:layout_marginTop="32dp"
+                            app:drawableEnd="@drawable/lock"
+                            app:hintText="Enter your password"
+                            />
+
+
+            <!-- Login Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/dark_blue_gray"
+                android:text="@string/login"
+                android:padding="10dp"
+                app:cornerRadius="10dp"
+                android:textColor="@color/white" />
+
+            <!-- Bottom Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="@string/don_t_have_account"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/dark_blue_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Error Msag -->
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

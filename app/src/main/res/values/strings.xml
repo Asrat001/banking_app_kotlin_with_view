@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Banking App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">My Accounts</string>
+    <string name="title_transactions">Transaction</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_here">Login Here</string>
+    <string name="password_please_enter_your_password">Password please enter your password</string>
+    <string name="don_t_have_account">don\'t have account?</string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="username_please_enter_your_username">Username please enter your username</string>
+    <string name="label">Label</string>
+    <string name="hint">Hint</string>
+    <string name="button">Button</string>
+    <string name="already_have_an_account">already have an account?</string>
+    <string name="good_morning">Good Morning!</string>
+    <string name="user_profile">user profile</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="jon_doe">Jon Doe</string>
+    <string name="transfer">Transfer</string>
+    <string name="recharge">Recharge</string>
+    <string name="bills">Bills</string>
+    <string name="more">More</string>
+    <string name="see_more">View All</string>
+    <string name="my_accounts">My Accounts</string>
+    <string name="visa_logo">Visa Logo</string>
+    <string name="_1234">**** **** **** 1234</string>
+    <string name="etb_2_200">ETB 2,200</string>
+    <string name="_12_26">12/26</string>
+    <string name="saving">Saving</string>
+    <string name="_1000_548">(1000****548)</string>
+    <string name="last_updated_01_24">last updated 01/24</string>
+    <string name="account_type_icon">account type icon</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="etb_86400_0">ETB 86400.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cards">Cards</string>
+</resources>

@@ -1,0 +1,76 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/visa_card_background"
+    android:padding="16dp"
+    android:elevation="0dp"
+    >
+
+    <!-- Visa logo -->
+    <ImageView
+        android:id="@+id/visaLogo"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/visa"
+        android:contentDescription="@string/visa_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Card number -->
+    <TextView
+        android:id="@+id/cardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_1234"
+        android:textColor="@color/dark_blue_gray"
+        android:textSize="18sp"
+        android:letterSpacing="0.05"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/visaLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- Vertical Balance section -->
+    <LinearLayout
+        android:id="@+id/balanceSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/balanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Balance"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/balanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/etb_2_200"
+            android:textColor="@color/light_gray"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <!-- Expiration date -->
+    <TextView
+        android:id="@+id/expiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_12_26"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

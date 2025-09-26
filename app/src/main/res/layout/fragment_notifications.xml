@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_transactions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!--    AppBar-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/light_gray"
+        android:elevation="0.3dp"
+        app:titleCentered="true"
+        app:title="Transactions"
+        app:titleTextColor="@color/dark_blue_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Filter Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        >
+
+        <!-- Date range + button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvDateRange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Recent"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnChangeRange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Select Time Range"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                 />
+        </LinearLayout>
+
+
+        <!-- Filter Chips -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal">
+
+            <!-- All -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                app:chipMinHeight="40dp"
+                android:text="All"
+                android:gravity="start"
+                app:chipBackgroundColor="#DBE3F8"
+                android:checked="true" />
+
+            <!-- Income -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Income"
+                android:padding="3dp"
+                app:chipMinHeight="40dp"
+                android:layout_weight="1"
+                app:chipIcon="@drawable/income"
+                android:layout_marginHorizontal="3dp"
+                 />
+
+            <!-- Expense -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:chipMinHeight="40dp"
+                android:text="Expense"
+                android:padding="10dp"
+                android:layout_weight="1"
+                app:chipIcon="@drawable/expense"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        />
+    <!--Today's Transactions List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactions"
+        android:layout_width="match_parent"
+        android:background="@drawable/card_bg"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        tools:listitem="@layout/transaction_item"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yesterday"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        />
+    <!--Today's Transactions List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvYesterdayTransactions"
+        android:layout_width="match_parent"
+        android:background="@drawable/card_bg"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        tools:listitem="@layout/transaction_item"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        />
+</LinearLayout>

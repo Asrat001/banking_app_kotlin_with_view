@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BankingApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Primary color for the header -->
+        <item name="colorPrimary">@color/dark_blue_gray</item>
+        <!-- Background color for content area -->
+        <item name="android:windowBackground">@color/light_gray</item>
+        <!-- Text color for hints and labels -->
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <!-- Button color -->
+        <item name="colorSecondary">@color/dark_blue_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+<!--    // Style for rounded ImageView-->
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

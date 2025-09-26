@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_blue_gray">#414A61</color> <!-- Header and button background -->
+    <color name="light_gray">#F5F5F5</color> <!-- Content background -->
+    <color name="gray">#757575</color> <!-- Hint text -->
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#F9F9F9</color>
+    <color name="text_scondary">#D8D8D8</color>
+    <color name="text_gary">#CECECE</color>
+    <color name="text_dark">#1D1919</color>
+</resources>
