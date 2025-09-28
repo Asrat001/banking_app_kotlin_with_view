@@ -78,7 +78,7 @@ class TextInputView @JvmOverloads constructor(
     // Method 1: Set input type using enum (recommended)
     fun setInputType(type: InputType) {
         when (type) {
-            InputType.TEXT -> binding.textInputEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT
+            InputType.TEXT -> binding.textInputEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
             InputType.PASSWORD -> {
                 binding.textInputEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
                 binding.textInputEditText.transformationMethod = android.text.method.PasswordTransformationMethod.getInstance()
@@ -89,6 +89,9 @@ class TextInputView @JvmOverloads constructor(
             InputType.MULTILINE -> {
                 binding.textInputEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_FLAG_MULTI_LINE
                 binding.textInputEditText.maxLines = 3
+            }
+            else -> {
+                binding.textInputEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_CLASS_PHONE
             }
         }
     }

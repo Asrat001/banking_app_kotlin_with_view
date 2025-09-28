@@ -62,7 +62,7 @@ class NetworkModule {
 
         return Retrofit.Builder()
             .baseUrl("https://challenge-api.qena.dev/api/")
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
 
     }
 

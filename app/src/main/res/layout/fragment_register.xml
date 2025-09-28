@@ -64,7 +64,7 @@
                 app:labelText="First Name"
                 android:layout_marginTop="8dp"
                 app:hintText="please specify your first name"
-                app:inputTypeAttr="multiline"
+                app:inputTypeAttr="text"
                 />
 
             <com.example.bankingapp.ui.componets.TextInputView
@@ -74,7 +74,7 @@
                 android:layout_marginBottom="8dp"
                 app:labelText="Last Name"
                 app:hintText="please specify your last name"
-                app:inputTypeAttr="multiline"
+                app:inputTypeAttr="text"
                 />
             <com.example.bankingapp.ui.componets.TextInputView
                 android:id="@+id/usernameField"
@@ -83,7 +83,7 @@
                 android:layout_marginBottom="8dp"
                 app:labelText="Username"
                 app:hintText="please enter new username"
-                app:inputTypeAttr="multiline"
+                app:inputTypeAttr="text"
                 />
             <com.example.bankingapp.ui.componets.TextInputView
                 android:id="@+id/phone_number"
@@ -92,7 +92,17 @@
                 android:layout_marginBottom="8dp"
                 app:labelText="Phone Number"
                 app:hintText="enter a valid phone number"
-                app:inputTypeAttr="multiline"
+                app:inputTypeAttr="phone"
+                />
+
+            <com.example.bankingapp.ui.componets.TextInputView
+                android:id="@+id/email_filed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:labelText="Email"
+                app:hintText="enter a valid email number"
+                app:inputTypeAttr="email"
                 />
 
             <!-- Password Field -->
@@ -102,14 +112,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 app:labelText="Password"
-                app:inputTypeAttr="text"
+                app:inputTypeAttr="password"
                 app:hintText="please create new password"
                 />
 
 
             <!-- Login Button -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="35dp"
@@ -129,7 +139,7 @@
                 android:textColor="@color/gray" />
 
             <TextView
-                android:id="@+id/tv_register"
+                android:id="@+id/tv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

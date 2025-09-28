@@ -16,8 +16,11 @@ fun<T> apiRequestFlow(call: suspend () -> Response<T>): Flow<ApiResponse<T>> = f
 
         try {
             if (response.isSuccessful) {
-                response.body()?.let { data ->
+                val data = response.body()
+                if (data != null) {
                     emit(ApiResponse.Success(data))
+                } else {
+                    emit(ApiResponse.Failure("Empty response body", "EMPTY_BODY"))
                 }
             } else {
                 response.errorBody()?.let { error ->

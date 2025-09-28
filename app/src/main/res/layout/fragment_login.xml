@@ -77,7 +77,7 @@
                             app:labelText="Username"
                             app:drawableEnd="@drawable/person"
                             app:hintText="Enter User Name"
-                            app:inputTypeAttr="multiline"
+                            app:inputTypeAttr="text"
                         />
 
                         <!-- Password Field -->
@@ -87,7 +87,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
                             app:labelText="Password"
-                            app:inputTypeAttr="text"
+                            app:inputTypeAttr="password"
                             android:layout_marginTop="32dp"
                             app:drawableEnd="@drawable/lock"
                             app:hintText="Enter your password"
@@ -126,17 +126,7 @@
     </ScrollView>
 
 
-    <!-- Error Msag -->
-    <TextView
-        android:id="@+id/error_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+
 
 
     <!-- Progress Bar -->

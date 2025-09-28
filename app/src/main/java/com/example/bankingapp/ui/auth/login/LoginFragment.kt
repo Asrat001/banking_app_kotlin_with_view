@@ -42,9 +42,6 @@ class LoginFragment : Fragment() {
         navController = Navigation.findNavController(view)
 
         tokenViewModel.token.observe(viewLifecycleOwner) { token ->
-
-            Log.d("LoginFragment", "Token: $token")
-
             if (token != null) {
                 navController.navigate(R.id.navigation_home)
             }
@@ -55,32 +52,37 @@ class LoginFragment : Fragment() {
         viewModel.loginResponse.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is ApiResponse.Loading -> {
+                    binding.btnLogin.isEnabled=false
                     binding.progressBar.visibility = View.VISIBLE
                 }
                 is ApiResponse.Failure -> {
                     binding.progressBar.visibility = View.GONE
+                    binding.btnLogin.isEnabled=true
                     Snackbar.make(view, response.errorMessage, Snackbar.LENGTH_LONG).show()
                 }
                 is ApiResponse.Success -> {
                     binding.progressBar.visibility = View.GONE
+                    binding.btnLogin.isEnabled=true
                     tokenViewModel.saveToken(response.data.accessToken)
                 }
             }
         }
 
+        binding.tvRegister.setOnClickListener { navController.navigate(R.id.navigation_register) }
 
 
         binding.btnLogin.setOnClickListener {
             val username = binding.usernameField.getText()
             val password = binding.passwordField.getText()
-
             viewModel.login(
                 LoginRequest(username, password),
                 _root_ide_package_.com.example.bankingapp.data.CoroutinesErrorHandler { errorMessage ->
-                    binding.errorText.text = errorMessage
+
                 }
             )
         }
+
+
     }
 
     override fun onResume() {

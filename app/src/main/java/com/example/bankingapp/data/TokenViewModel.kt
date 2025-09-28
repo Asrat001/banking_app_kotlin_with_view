@@ -29,6 +29,9 @@ class TokenViewModel @Inject constructor(
     fun saveToken(token: String) {
         viewModelScope.launch(Dispatchers.IO) {
             tokenManager.saveToken(token)
+            withContext(Dispatchers.Main){
+                this@TokenViewModel.token.value = token
+            }
         }
     }
 

@@ -24,7 +24,7 @@
         android:autofillHints=""
         android:hint="@string/hint"
         android:maxLines="1"
-        android:textColor="@android:color/white"
+        android:textColor="@color/dark_blue_gray"
         android:textColorHint="@color/gray"
         android:paddingVertical="16dp"
         android:paddingHorizontal="0dp"

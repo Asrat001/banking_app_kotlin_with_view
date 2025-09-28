@@ -47,36 +47,36 @@ class TransactionFragment : Fragment() {
             Toast.makeText(requireContext(), "Clicked: ${item.description}", Toast.LENGTH_SHORT).show()
         }
 
-        //initialize transaction adaptor
-        yestransactionAdaptor= TransactionItemAdaptor { item ->
-            Toast.makeText(requireContext(), "Clicked: ${item.description}", Toast.LENGTH_SHORT).show()
-        }
-        //setup transaction recycler view
-        binding.rvTransactions.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvTransactions.adapter = transactionAdaptor
-        //setup transaction recycler view
-        binding.rvYesterdayTransactions.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvYesterdayTransactions.adapter = yestransactionAdaptor
-
-
-//        todaylist
-        val transactionItems = listOf(
-            TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
-            TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
-            TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
-
-        )
-        //yesterday list
-
-        val yeserdatTransactionItems = listOf(
-            TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
-            TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
-            TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
-
-        )
-
-        transactionAdaptor.submitList(transactionItems)
-        yestransactionAdaptor.submitList(yeserdatTransactionItems)
+//        //initialize transaction adaptor
+//        yestransactionAdaptor= TransactionItemAdaptor { item ->
+//            Toast.makeText(requireContext(), "Clicked: ${item.description}", Toast.LENGTH_SHORT).show()
+//        }
+//        //setup transaction recycler view
+//        binding.rvTransactions.layoutManager = LinearLayoutManager(requireContext())
+//        binding.rvTransactions.adapter = transactionAdaptor
+//        //setup transaction recycler view
+//        binding.rvYesterdayTransactions.layoutManager = LinearLayoutManager(requireContext())
+//        binding.rvYesterdayTransactions.adapter = yestransactionAdaptor
+//
+//
+////        todaylist
+//        val transactionItems = listOf(
+//            TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
+//            TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
+//            TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
+//
+//        )
+//        //yesterday list
+//
+//        val yeserdatTransactionItems = listOf(
+//            TransactionItem("1", "2024-10-01", "Grocery Store", 75.50, "GROCERY"),
+//            TransactionItem("2", "2024-10-02", "Salary", 2000.00, "ISCBILL"),
+//            TransactionItem("3", "2024-10-03", "Electric Bill", 120.75, "DEBIT"),
+//
+//        )
+//
+//        transactionAdaptor.submitList(transactionItems)
+//        yestransactionAdaptor.submitList(yeserdatTransactionItems)
 
     }
 

@@ -54,10 +54,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-//        // 2️⃣ Connect toolbar with navController
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//
-
         // Hide bottom nav on login/register screens
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.navView.visibility = if (
